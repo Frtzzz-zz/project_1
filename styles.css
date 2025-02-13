@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(black,green,lightgreen, gold, brown);
+}
+
+h1{
+    color: aliceblue;
+    font-size: 50px;
+    font-style: bold;
+}
+
+main h2, h3{
+    color: aliceblue;
+    outline: black;
+    font-size: 30px;
+    font-style: bold;
+}
+
+h4  {
+    font-size: 20px;
+}
+
+legend {
+    font-size: 20px;
+    color: black;
+}
+
+
+
+.pointofcontrast h2{
+    color: black;
+}

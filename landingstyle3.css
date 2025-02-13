@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+*{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html{
+    height: 100%;
+}
+
+/* setup ng header/wrapper sa navigation pane sa taas */
+/* important justify-content and align-items, centering a div yan eh */
+.wrapper{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(0, 0, 0, 0.658); /*hover sa rgba para ma set opacity/alpha */
+    
+}
+
+/* in case na mas malinaw BG img na to ==== url("https://wallpapers.com/images/high/black-and-green-1920-x-1200-background-psa2cnwsi98qti86.webp") */
+
+body{
+    height: 100%;
+    background-image: url("assets/img/black-and-green-1920-x-1200-background-psa2cnwsi98qti86.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    height: calc(122.5vh - 80px); /*height of background; adjust nlng*/
+}
+
+
+
+
+/* ========== HOMEPAGE/LANDING PAGE ========== */
+
+
+
+.navheader h1{
+    width: 100%;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    text-shadow:  2px 4px 3px rgba(0, 128, 0, 0.678);
+}
+
+
+.navmenu li{
+    display: inline-block;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none; /* para matanggal bulletpoint symbol sa kaliwa. di lang kita kasi black background */
+}
+
+.navmenu a{
+    text-decoration: none; /* para matanggal underline sa links */
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+
+a:visited{
+    color: chartreuse;
+}
+
+a{
+    color:chartreuse;
+}
+
+a:hover{
+    color: whitesmoke;
+}
+
+
+
+.homepage{
+    color: whitesmoke;
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content:  space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(to bottom , rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 128, 0, 0.518));
+    z-index: 10;
+}
+
+.homepage{
+    animation-name: homeanim;
+    animation-duration: 1s;
+}
+@keyframes homeanim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.homepage h2{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 300;
+    text-shadow:  5px 2px 10px rgba(0, 128, 0, 0.678);
+}
+
+.homepage button{
+    background-color: black;
+    color:whitesmoke;
+    width: 100%; /*di ko macenter eh haha*/ /*sakop pala to*/
+    height: 100px;
+    border-radius: 15px;
+    border: 1px solid chartreuse;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.homepage button:hover{
+   animation-fill-mode: forwards;
+   animation-duration: 1s;
+   animation-name: btnanim;
+}
+
+@keyframes btnanim{
+    0%{
+        font-weight: 300;
+    }
+    50%{
+        background: linear-gradient(to bottom right, green,forestgreen,chartreuse, lightgreen);
+        color: black;  
+        font-size: 30px;
+        font-weight: 500;
+        size: 1.1; 
+    }
+    100%{
+        background: linear-gradient(to bottom right, green,forestgreen,chartreuse, lightgreen);
+        color: black;
+        font-size: 30px;
+        font-weight: 500;
+        size: 1.1; 
+    }
+}
+
+
+
+
+
+
+
+/* ========== ABOUT ME PAGE ========== */
+
+
+.aboutmecontainer{
+    display: flex; /*important; choose flex or block */
+    color: whitesmoke;
+    width: 80%; /* important */
+    height: 100vmax;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    justify-content: center;
+    /*padding-left: 150px; /*pag wala to medyo nasa left yung mga div */ /* pwede din padding-left: 150px; kaso naka center yung 30% flexbox */
+    gap: 15px;
+    word-wrap: break-word; /* important */
+    margin: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* important; this must be in the container for flexbox */
+    
+}
+
+
+.aboutmecontainer h1{
+    display: flex;
+    width: 80%; /* naka match sa container */
+    justify-content: center;
+    font-weight: 100;
+    font-size: 80px;
+    color: chartreuse;
+    padding-bottom: 25px;
+}
+
+
+.aboutmecontainer h1::before{
+    display: flex;
+    width: 80%; /* naka match sa container */
+    justify-content: center;
+    font-weight: 100;
+    font-size: 80px;
+    color: chartreuse;
+
+    /*reflection*/
+    content: attr(data-text);
+    position: absolute;
+    padding-bottom: 8px; /*upside down to*/
+    transform-origin: bottom;
+    transform: rotateX(180deg);
+    line-height: 0.9;
+    background: linear-gradient(0deg, chartreuse 0, transparent 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+
+.details{
+    width: 80%; /*sakop neto width ng container*/
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.904);
+    
+}
+
+
+.details img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.details h2, .details h3, .detailstext{
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+}
+
+.skills{
+    width: 80%;
+    padding-bottom: 50px;
+    border: 1px solid chartreuse;
+    border-radius: 5px ;
+    background-color:rgba(0, 0, 0, 0.904);
+
+}
+
+.skills h2, .skills h3{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 15px;
+    padding-bottom: 15px;
+    text-shadow:  2px 4px 3px rgba(0, 128, 0, 0.678);
+}
+
+            /*important*/
+.skills h3, .skills ul{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills ul{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+
+.skills li{
+    display: flex;
+    justify-content: center;
+}
+
+
+.skill_icon:hover{
+    animation-name: ul_anim;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ul_anim{
+    0%{
+
+    }
+    100%{
+        scale: 1.2;
+        text-shadow:  3px 3px 3px rgba(0, 128, 0, 0.678);
+    }
+}
+
+.skills img{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon{
+    padding-left: 10px;
+}
+
+
+.filledbar{
+    width: 3%;
+    height: 15px;
+    background-color: chartreuse;    
+    animation-name: shadowanim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shadowanim{
+    0%{
+        opacity: 0;
+        box-shadow: 1px 2px 10px rgba(0, 128, 0, 0.678);
+    }
+    50%{
+        opacity: 100%;
+        box-shadow: 1px 2px 10px rgba(0, 128, 0, 0.678);
+    }
+    100%{
+        opacity: 0;
+        box-shadow: 1px 2px 10px rgba(0, 128, 0, 0.678);
+    }
+}
+
+.bar{
+    display: inline-block;
+    width: 95%;
+    height: 15px;
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+    overflow: hidden; /*para hindi mag overflow */
+    margin-left: 15px; /*important; ayaw nung padding-left*/
+}
+
+
+.otherstuff{
+    width: 30%;
+    padding-top: 15px;
+    padding-left: 15px;
+    border: 1px solid chartreuse;
+    border-radius: 5px ;
+    background-color:rgba(0, 0, 0, 0.904);
+}
+
+.otherstuff li{
+    padding-left: 15px;
+    list-style-type: none;
+    display: block;
+}
+
+
+.aboutmecontainer h1{
+    animation-name: opacityanim;
+    animation-duration: 1.5s;
+}
+
+@keyframes opacityanim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+.details{
+    animation-name: boxanim1;
+    animation-duration: 1s;
+}
+.skills{
+    animation-name: boxanim2;
+    animation-duration: 1.8s;
+}
+.otherstuff{
+    animation-name: boxanim3;
+    animation-duration: 2.4s;
+}
+
+
+@keyframes boxanim1{
+    0%{
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes boxanim2{
+    0%{
+        opacity: 0%;
+    }
+    
+    50%{
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes boxanim3{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+/* ========== PROJECTS ========== */
+.projectcontainer{
+    display: grid;
+    place-items: center;
+    padding-block: 5px;
+}
+
+.cardtitle{
+    font-weight: 200;
+}
+
+.cardcontainer{
+    display: grid;
+    grid-template-columns: auto auto auto; /* sa wakassssss */
+    column-gap: 25px; /* column..? idk */
+}
+
+
+.projarticle{
+    /*overflow: hidden;*/
+    color: whitesmoke;
+}
+
+
+.cardimg{
+    width: 350px;
+    height: 290px;
+    border: 1px solid green;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cardimg:hover{
+    box-shadow: 1px 2px 10px rgba(0, 128, 0, 0.678);
+}
+
+.carddata{
+    /*positioning*/
+    width: 350px;
+    padding: 10px;
+    position: absolute;
+    margin-top: 5px;
+    /*bottom: 6px;
+    margin: 1px;*/
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74), rgba(27, 27, 27, 0.74), rgba(53, 53, 53, 0.74)) ;
+    border-radius: 10px;
+    /*kung hindi gagawing sakto width, use margins */
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: cardanim;
+}
+
+
+
+@keyframes cardanim{
+    0%{
+        transform: translateY(100px);
+        font-size: 0;
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+
+
+
+.cardbtn{
+    background-color: black;
+    color:whitesmoke;
+    width: 100%; /*di ko macenter eh haha*/
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid chartreuse;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.carddata button:hover{
+   animation-fill-mode: forwards;
+   animation-duration: 1s;
+   animation-name: btnanim;
+}
+
+@keyframes btnanim{
+    0%{
+        font-weight: 300;
+    }
+    50%{
+        background: linear-gradient(to bottom right, green,forestgreen,chartreuse, lightgreen);
+        color: black;  
+        font-size: 30px;
+        font-weight: 300;
+        size: 1.1; 
+    }
+    100%{
+        background: linear-gradient(to bottom right, green,forestgreen,chartreuse, lightgreen);
+        color: black;
+        font-size: 30px;
+        font-weight: 300;
+        size: 1.1; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== SCHOOL INFO ========== */
+
+.schoolcard{
+    height: 450px;
+    width: 900px;
+    display: grid;
+    place-items: center;
+    margin-inline: 15px;
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.schoolcard img{
+    max-height: 700px;
+    max-width: 1200px;
+}
+
+.infocard{
+    width: 700px;
+    height: 100px;
+    border: 1px solid chartreuse;
+    color: whitesmoke;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74), rgba(27, 27, 27, 0.74), rgba(53, 53, 53, 0.74)) ;
+    border-radius: 5px;
+    position: absolute; /* idk but it works, basically labas na siya ng div, may sariling postion on the screen*/
+    margin-top: 30%; /* margin FROM ORIGIN, try mo edit decrement*/
+    
+
+    text-align: center;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: infocardanim;
+}
+
+@keyframes infocardanim{
+    0%{
+        transform: translateY(150px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ========== CONTACT ========== */
+
+.contactcontainer{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 25px;
+    width: 50%; /* important */
+    height: 100%;
+    border: 1px solid chartreuse;
+}
+
+.contactcontainer h2, .contactcontainer h3{
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.inputcontainer{
+    display: flex; /* important */
+    flex-wrap: wrap; /* important */
+    justify-content: center;
+    height: 100%;
+    border: 1px solid chartreuse;
+}
+
+.form1{
+    display: flex;
+    padding: 5px;
+    width: 50%;
+    border: 1px solid chartreuse;
+}
+
+.firstname{
+    width: 100%; /* 100% of form 1*/
+    height: 50px;
+    font-size: 20px;
+    padding: 5px; /* padding ng text sa loob */
+}
+
+.form2{
+    display: flex;
+    padding: 5px;
+    width: 50%; /* 50% of form 2*/
+    border: 1px solid chartreuse;
+}
+
+.lastname{
+    width: 100%; /* 100% of form 3*/
+    height: 50px;
+    font-size: 20px;
+    padding: 5px; /* padding ng text sa loob */
+}
+
+.form3{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid chartreuse;
+}
+
+.email{
+    width: 100%; /* 100% of form 4*/
+    height: 50px;
+    font-size: 20px;
+    padding: 5px; /* padding ng text sa loob */
+}
+
+.form4{
+    display: flex;
+    padding: 5px;
+    width: 70%;
+    border: 1px solid chartreuse;
+}
+
+.country{
+    width: 100%; /* 100% of form 5*/
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.form5{
+    display: flex;
+    padding: 5px;
+    width: 30%;
+    border: 1px solid chartreuse;
+}
+
+.age{
+    width: 100%; /* 100% of form 5*/
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+}

@@ -1,0 +1,351 @@
+.header{
+    color: green;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+}
+
+.goto{
+    background: linear-gradient(green, black , green);
+    text-align: center;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* wala pang font family*/
+
+.things li{
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: 5px;
+    padding-left: 50px; 
+    padding-right: 50px;
+}
+
+.html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-image: url("https://i.imghippo.com/files/Jp2061iaE.png");
+    background-size: 100%;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 5px;
+    margin: 0;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.item{
+    width: 150px;
+    height: 30px;
+    padding: 1cm;
+    
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    
+    color:whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px; /* kapal*/
+    border: 1px solid cyan;
+    
+    text-shadow: 5px 5px 5px black;
+}
+
+
+.Motherboard{
+    background-image: url("https://www.avast.com/hs-fs/hubfs/New_Avast_Academy/what_motherboard_do_i_have_academy/Academy-How-Do-I-Know-What-Type-of-Motherboard-I-Have-Hero.jpg?width=1200&name=Academy-How-Do-I-Know-What-Type-of-Motherboard-I-Have-Hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    /*percentage ng nasasakop*/
+    flex-grow: 40; 
+    flex-basis: 40%;
+    height: 75px;
+}
+.Motherboard:hover{
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-name: MoBoanim;
+}
+
+/* scale animation*/
+
+@keyframes MoBoanim{
+    0%{
+        
+    }
+    50%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        scale: 1.1;
+    }
+    100%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+    
+    }
+}
+
+.CPU {
+    background-image: url("https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL292ZXJjbG9jay1jcHUuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9LCJ0b0Zvcm1hdCI6ImF2aWYifX0=");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 0; 
+    flex-basis: 30%;
+    height: 75px;
+    animation-play-state: paused;
+}
+.CPU:hover{
+    background-image: linear-gradient(to bottom right, green, cyan);
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+}
+
+
+.Mouse {
+    background-image: url("https://i.imghippo.com/files/TAE4364uOs.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 0; 
+    flex-basis: 0%;
+    height: 75px;
+}
+.Mouse:hover{
+    background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+}
+
+.RAM {
+    background-image: url("https://i.imghippo.com/files/BqC6868Ic.png");
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 10%;
+    height: 290px;
+
+}
+
+.RAM:hover{
+   animation-fill-mode: forwards;
+   animation-duration: 1s;
+   animation-name: RAManim;
+}
+
+/* x-y axis animation/top-bottom left-right animation */
+@keyframes RAManim{
+    0%{
+        
+    }
+    50%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateX(40px);
+        
+    }
+    100%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateX(0);
+    }
+}
+
+.GraphicsCard {
+    background-image: url("https://i.imghippo.com/files/sI8735sJw.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 100; 
+    flex-basis: 50%;
+    height: 290px
+}
+.GraphicsCard:hover{
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: Graphicsanim;
+}
+
+@keyframes Graphicsanim {
+    0%{
+
+    }
+    50%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+    transform: translateY(40px);
+    }
+    100%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+    transform: translateY(0px);
+    }
+}
+
+
+.Keyboard {
+    background-image: url("https://i.imghippo.com/files/wgR2898Nw.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 0; 
+    flex-basis: 10%;
+    height: 290px;
+}
+
+.Keyboard:hover{
+   animation-fill-mode: forwards;
+   animation-duration: 1s;
+   animation-name: Keyboardanim;
+}
+
+@keyframes Keyboardanim{
+    0%{
+
+    }
+    50%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateX(-40px);
+    }
+    100%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateX(0px);
+    }
+}
+
+.PowerSupply {
+    background-image: url("https://i.imghippo.com/files/IRoT7558AA.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 10; 
+    flex-basis: 20.3333%;
+    height: 200px;
+}
+
+.PowerSupply:hover{
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+    animation-name: PowerSupplyanim;
+}
+
+/* bouncing animation */
+@keyframes PowerSupplyanim{
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        
+        transform: translateY(0);
+    }
+    40%{ 
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateY(-35px);
+    }
+    60%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateY(0px);
+    }
+    80%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateY(-15px);
+    }
+    85%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateY(0px);
+    }
+    95%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateY(-5px);
+    }
+    100%{
+        background-image: linear-gradient(to bottom right, green, cyan);
+        /* faint shadows*/
+        text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+        transform: translateY(0);
+    }
+}
+
+.CasesNmonitor {
+    background-image: url("https://static1.makeuseofimages.com/wordpress/wp-content/uploads/wm/2024/04/two-oled-monitors-vesa-mounted-on-a-desk-with-keyboard-and-mouse-below-it.jpg?q=70&fit=crop&w=1140&h=&dpr=1");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 10; 
+    flex-basis: 20.3333%;
+    height: 200px;
+}
+.CasesNmonitor:hover{
+    background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+}
+
+.otherperiph {
+    background-image: url("https://www.eksa.net/cdn/shop/articles/e9707914483d3e37f20170bbcef96574.jpg?v=1681451772");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-grow: 10; 
+    flex-basis: 20.3333%;
+    height: 200px;
+}
+
+.otherperiph:hover{
+    background-image: linear-gradient(to bottom right, green, cyan);
+    /* faint shadows*/
+    text-shadow: 0px 0px 0px black, 0 50px 50px cyan, 0 0 1px darkblue;
+}
+
+.item:hover{
+    color: black;
+}
+
+/*make div as clickable link*/
+/*bad practice daw using absolution*/
+/*kailangan i match specific size ng div*/
+/*.link {
+    position:absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  } */
+
+.things a{
+    color:forestgreen;
+}
+
+.things a:hover{
+    color: white;
+    background-image: linear-gradient(to top, black,  green);
+    text-shadow: 0px 1px 1px black, 0px 0px 50px greenyellow, 0 0 1px black;
+}
+
+things a:visited {
+    color: forestgreen;
+}

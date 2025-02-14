@@ -703,7 +703,7 @@ a:hover{
 
 
 
-@media (max-width <= 850px){
+@media (max-width: 850px){
     .navheader h1{
         font-size: 1.5rem;
     }
@@ -715,7 +715,7 @@ a:hover{
     }
 }
 
-@media (max-width <= 540px){
+@media (max-width: 540px){
     .navheader h1{
         font-size: 1rem;
     }
@@ -732,7 +732,7 @@ a:hover{
     }
 }
 
-@media (max-width <= 465px){
+@media (max-width: 465px){
     .navheader h1{
         font-size: 1rem;
     }
@@ -745,7 +745,7 @@ a:hover{
 }
 
 
-@media (max-width <= 375px){
+@media (max-width: 375px){
     .navheader h1{
         font-size: 0.8rem;
     }

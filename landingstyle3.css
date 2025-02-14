@@ -17,7 +17,7 @@
 .wrapper{
     display: flex;
     justify-content: center; 
-    align-items: center;
+    /*removed align-items para customizable margin-top kada page*/
     min-height: 110vh;
     background: rgba(0, 0, 0, 0.658); /*hover sa rgba para ma set opacity/alpha */
     
@@ -84,6 +84,7 @@ a:hover{
 
 .homepage{
     color: whitesmoke;
+    margin-top: 18.5%;
 }
 
 .navigation{
@@ -221,7 +222,7 @@ a:hover{
     border: 1px solid chartreuse;
     border-radius: 5px;
     background-color:rgba(0, 0, 0, 0.904);
-    
+    padding: 20px;
 }
 
 
@@ -235,10 +236,27 @@ a:hover{
     border-radius: 50%;
 }
 
-.details h2, .details h3, .detailstext{
+.details h2, .details h3{
     display: flex;
     margin: 15px;
     justify-content: center;
+}
+
+.detailstext h3{
+    display: inline;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 18px;
+}
+.detailstext a{
+    text-decoration: none;
+}
+.detailstext a:visited{
+    display: inline;
+    color: chartreuse;
+}
+.detailstext a:hover{
+    color: whitesmoke;
 }
 
 .skills{
@@ -435,7 +453,7 @@ a:hover{
 .projectcontainer{
     display: grid;
     place-items: center;
-    padding-block: 5px;
+    padding-block: 5px; 
 }
 
 .cardtitle{
@@ -443,6 +461,9 @@ a:hover{
 }
 
 .cardcontainer{
+    margin-top: 13%;
+    margin-left: 1%;
+    margin-right: 1%;
     display: grid;
     grid-template-columns: auto auto auto; /* sa wakassssss */
     column-gap: 25px; /* column..? idk */
@@ -555,6 +576,7 @@ a:hover{
 .schoolcard{
     height: 450px;
     width: 900px;
+    margin-top: 10%;
     display: grid;
     place-items: center;
     margin-inline: 15px;
@@ -564,10 +586,39 @@ a:hover{
     overflow: hidden;
 }
 
-.schoolcard img{
-    max-height: 700px;
-    max-width: 1200px;
+
+.schoolcard{
+    width: 80%;
+    overflow: hidden;
 }
+.fade-img {
+    position: absolute; /*kapag relative, img is directly under. kapag absolute, can overlap */
+    max-width: 75%;
+    max-height: 400px;
+    object-fit: cover;
+    opacity: 0%;
+}
+.img1 {
+    animation: fade 15s infinite;
+}
+.img2 {
+    animation: fade 15s infinite 4s;
+}
+.img3 {
+    animation: fade 15s infinite 8s;
+}
+.img4 {
+    animation: fade 15s infinite 12s;
+}
+@keyframes fade {
+    0%, 20% {
+        opacity: 100%;
+    }
+    25%, 95% {
+        opacity: 0%;
+    }
+}
+
 
 .infocard{
     width: 700px;
@@ -611,9 +662,10 @@ a:hover{
     color: whitesmoke;
     text-align: center;
     font-size: 25px;
-    width: 50%; /* important */
+    width: 70%; /* important */
     height: 100%;
-    border: 1px solid chartreuse;
+    
+    margin-top: 15%;
 }
 
 .contactcontainer h2, .contactcontainer h3{
@@ -634,7 +686,7 @@ a:hover{
     display: flex;
     padding: 5px;
     width: 50%;
-    border: 1px solid chartreuse;
+    
 }
 
 .firstname{
@@ -648,7 +700,7 @@ a:hover{
     display: flex;
     padding: 5px;
     width: 50%; /* 50% of form 2*/
-    border: 1px solid chartreuse;
+    
 }
 
 .lastname{
@@ -662,7 +714,7 @@ a:hover{
     display: flex;
     padding: 5px;
     width: 100%;
-    border: 1px solid chartreuse;
+    
 }
 
 .email{
@@ -676,7 +728,7 @@ a:hover{
     display: flex;
     padding: 5px;
     width: 70%;
-    border: 1px solid chartreuse;
+    
 }
 
 .country{
@@ -690,7 +742,7 @@ a:hover{
     display: flex;
     padding: 5px;
     width: 30%;
-    border: 1px solid chartreuse;
+    
 }
 
 .age{
@@ -702,8 +754,8 @@ a:hover{
 
 
 
-
-@media all and (max-width: 850px){
+/* =========== HOME  =========== */
+@media all and (max-width: 1150px){
     .navheader h1{
         font-size: 1.5rem;
     }
@@ -712,15 +764,20 @@ a:hover{
     }
     .homepage h2{
         font-size: 50px;
+        margin-top: 15%;
     }
 }
 
-@media all and (max-width: 540px){
+@media all and (max-width: 565px){
     .navheader h1{
         font-size: 1rem;
     }
     .navmenu a{
         font-size: 0.8rem;
+    }
+    .homepage h2{
+        font-size: 50px;
+        margin-top: 25%;
     }
     .homepage button{
         font-size: 15px;
@@ -741,7 +798,7 @@ a:hover{
     }
     .homepage button{
         height: 80px;
-    }  
+    }
 }
 
 
@@ -753,7 +810,8 @@ a:hover{
         font-size: 0.5rem;
     }
     .homepage h2{
-        font-size: 35px;
+        font-size: 45px;
+        margin-top: 45%;
     }
     .homepage button{
         font-size: 15px;
@@ -761,3 +819,221 @@ a:hover{
     }
 }
 
+
+
+
+/* =========== ABOUT ME =========== */
+
+/* LARGE SCREENS */
+@media all and (max-width: 1180px){
+    .wrapper{
+        min-height: 170vmax;
+    }
+}
+@media all and (max-width: 980px){
+    .skills ul, .skill_icon:hover{
+        scale: 0.9;
+    }
+}
+@media all and (max-width: 885px){
+    .skills ul, .skill_icon:hover{
+        scale: 0.85;
+    }
+    .aboutmecontainer{
+        width: 100%;
+    }
+}
+@media all and (max-width: 806px){
+    .wrapper{
+        min-height: 185vmax;
+    }
+}
+
+/* TABLET */
+@media all and (max-width: 763px){
+    .wrapper{
+        min-height: 250vmax;
+    }
+    .skills ul, .skill_icon:hover{
+        scale: 0.8;
+    }
+    .aboutmecontainer{
+        width: 100%;
+    }
+}
+@media all and (max-width: 580px){
+    
+    .skills ul, .skill_icon:hover{
+        scale: 0.7;
+    }
+    .bar{
+        width: 92%;   
+    }
+}
+
+/* PHONE */
+@media all and (max-width: 540px){
+    .wrapper{
+        min-height: 350vmax;
+    }
+    .skills ul, .skill_icon:hover{
+        scale: 0.65;
+    }
+    .aboutmecontainer h1{
+        scale: 0.9;
+    }
+    .aboutmecontainer h1::before{
+        scale: 0.9;
+        opacity: 0;
+    }
+    .aboutmecontainer{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 504px){
+    .skills ul, .skill_icon:hover{
+        scale: 0.6;
+    }
+    .aboutmecontainer h1{
+        scale: 0.85;
+    }
+    .aboutmecontainer{
+        width: 100%;
+    }
+}
+@media all and (max-width: 420px){
+    .skills ul, .skill_icon:hover{
+        scale: 0.55;
+    }
+    .aboutmecontainer h1{
+        scale: 0.85;
+    }
+    .aboutmecontainer{
+        width: 110%;
+    }
+}
+
+
+
+
+
+/* =========== PROJECTS =========== */
+/* WIDE SCREEN AND TABLET */
+@media all and (max-width: 1102px){
+    .cardcontainer{
+        grid-template-columns: repeat(2,1fr);
+        height: 1000px;
+    }
+}
+@media all and (max-width: 980px){
+    .cardcontainer{
+        grid-template-columns: repeat(1,1fr);
+        height: auto;
+    }
+}
+@media all and (max-width: 763px){
+    .cardcontainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* PHONE */
+@media all and (max-width: 540px){
+    .cardcontainer{
+        grid-template-columns: repeat(1,1fr);
+        height: 1500px;
+        padding-top: 20%;
+    }
+}
+@media all and (max-width: 420px){
+    .cardcontainer{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}
+
+
+
+
+/* =========== SCHOOL INFO =========== */
+@media all and (max-width: 1280px){
+    .fade-img {
+        max-width: 70%;
+       }
+}
+@media all and (max-width: 763px){
+   .schoolcard{
+    width: 90%;
+    margin-top: 25%;
+   }
+   .infocard{
+    width: 80%;
+   }
+   .fade-img {
+    max-width: 70%;
+   }
+}
+@media all and (max-width: 565px){
+    .schoolcard{
+     margin-top: 25%;
+    }
+    .infocard{
+        width: 80%;
+    }
+ }
+ 
+@media all and (max-width: 565px){
+    .schoolcard{
+     margin-top: 25%;
+     height: 350px;
+    }
+    .infocard{
+        width: 80%;
+        height: 80px;
+        margin-top: 55%;
+    }
+    .infocard h3{
+        font-size: 15px;
+    }
+    .infocard h4{
+        font-size: 10px;
+    }
+ }
+
+
+
+
+/* =========== CONTACT =========== */
+/* Wide Screens */ 
+@media all and (max-width: 990px){
+    .contactcontainer{
+        width: 100%;
+        scale: 0.9;
+        margin-top: 20%;
+    }
+ }
+
+/* TABLET */
+ @media all and (max-width: 675px){
+    .contactcontainer{
+        width: 100%;
+    }
+    .firstname, .lastname, .email, .age, .country{
+        font-size: 15px;
+    }
+ }
+ @media all and (max-width: 585px){
+    .contactcontainer{
+        width: 80%;
+        margin-top: 30%;
+    }
+ }
+
+ /* PHONE */
+ @media all and (max-width: 480px){
+    .contactcontainer{
+        scale: 1;
+        margin-top: 32%;
+    }
+ }

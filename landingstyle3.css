@@ -699,3 +699,63 @@ a:hover{
     font-size: 20px;
     padding: 5px;
 }
+
+
+
+@media (max-width: 850px){
+    .navheader h1{
+        font-size: 1.5rem;
+    }
+    .navmenu a{
+        font-size: 1rem;
+    }
+    .homepage h2{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 540px){
+    .navheader h1{
+        font-size: 1rem;
+    }
+    .navmenu a{
+        font-size: 0.8rem;
+    }
+    .homepage button{
+        font-size: 15px;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .navigation{
+        height: 80px;
+    }
+}
+
+@media (max-width: 465px){
+    .navheader h1{
+        font-size: 1rem;
+    }
+    .navmenu a{
+        font-size: 0.6rem;
+    }
+    .homepage button{
+        height: 80px;
+    }  
+}
+
+
+@media (max-width: 375px){
+    .navheader h1{
+        font-size: 0.8rem;
+    }
+    .navmenu a{
+        font-size: 0.5rem;
+    }
+    .homepage h2{
+        font-size: 35px;
+    }
+    .homepage button{
+        font-size: 15px;
+        height: 80px;
+    }
+}

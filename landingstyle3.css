@@ -217,6 +217,65 @@ a:hover{
 }
 
 
+.btn_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.fb_btn button{
+    background-color: black;
+    color:whitesmoke;
+    border: 1px solid chartreuse;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+}
+.git_btn button{
+    background-color: black;
+    color:whitesmoke;
+    border: 1px solid chartreuse;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+}
+.fb_btn button:hover{
+    animation-name: fb_btn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fb_btn{
+    100%{
+    background-color: dodgerblue;
+    color: whitesmoke;
+    border: 1px solid dodgerblue;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+    }
+}
+.git_btn button:hover{
+    animation-name: git_btn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes git_btn{
+    100%{
+    background-color: darkorchid ;
+    border: 1px solid darkorchid;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+    }
+}
+
+
 .details{
     width: 80%; /*sakop neto width ng container*/
     border: 1px solid chartreuse;
